@@ -60,12 +60,12 @@
         compatible = "zmk,combos";
         button_layer_combo {
             timeout-ms = <50>;
-            bindings = <&kp 7>;
+            bindings = <&lt 7>;
             key-positions = <0 1 2>; 
         };
         calc_combo {
             timeout-ms = <50>; 
-            bindings = <&kp LC(AL(F4))>; 
+            bindings = <&kp LCTRL &kp LALT &kp F4>;
             key-positions = <10 21>; 
         };
     };
