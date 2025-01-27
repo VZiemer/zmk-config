@@ -63,12 +63,11 @@
             bindings = <&kp 7>;
             key-positions = <0 1 2>; 
         };
-
-    calc_combo {
-        timeout-ms = <50>; // Tempo máximo para pressionar as teclas juntas
-        bindings = <&kp LC(AL(F4))>; // Substitua pela ação correta para abrir a calculadora no seu sistema
-        key-positions = <10 21>; // Substitua pelas posições reais de A e Z
-    };
+        calc_combo {
+            timeout-ms = <50>; 
+            bindings = <&kp LC(AL(F4))>; 
+            key-positions = <10 21>; 
+        };
     };
 
     keymap {
