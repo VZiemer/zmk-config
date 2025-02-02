@@ -20,7 +20,7 @@
 #define NAV  1
 #define SYM  2
 #define ADJ  3
-#define WS 4
+#define WST   4
 
 &mt {
   quick-tap-ms = <100>;
@@ -105,7 +105,7 @@ label= "BASE"                              ;
 
                 &kp Q       &kp W       &kp F       &kp P       &kp G           &kp J       &kp L       &kp U       &kp Y       &kp SEMI
                 &mt LGUI A  &mt LALT R  &mt LCTRL S &mt LSHFT T &kp D           &kp H       &mt RSHFT N &mt RCTRL E &mt RALT I  &mt RGUI O
-    &lt ADJ Q       &kp Z       &kp X       &kp C       &kp V       &kp B           &kp K       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp BSLH
+    &lt ADJ Q   &kp Z       &kp X       &kp C       &kp V       &kp B           &kp K       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &lt WST BSLH
                                         &kp DEL   &lt NAV TAB   &kp SPACE       &kp RET   &lt SYM ESC   &kp BSPC
                         >;
                 };
@@ -193,7 +193,7 @@ label= "ADJ"                               ;
 
         ws_layer {
 // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-label= "WS"                               ;
+label= "WST"                               ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
@@ -208,9 +208,9 @@ label= "WS"                               ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &trans      &trans     &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
-                &trans      &trans     &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans  
-    &trans      &trans      &trans     &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans      &trans         
-                                       &trans      &trans      &trans          &trans      &trans      &trans      
+                &trans      &trans     &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
+    &trans      &trans      &trans     &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans      &trans
+                                       &trans      &trans      &trans          &trans      &trans      &trans
                         >;
 };
 
