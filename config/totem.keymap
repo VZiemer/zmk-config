@@ -20,8 +20,7 @@
 #define NAV  1
 #define SYM  2
 #define ADJ  3
-#define TVP1 4
-#define TVP2 5
+#define WS 4
 
 &mt {
   quick-tap-ms = <100>;
@@ -33,15 +32,54 @@
 / {
      combos {
             compatible = "zmk,combos";
-            combo_esc {
+            // --- Combos WS --- //
+            combo_rename_ws {
                 timeout-ms = <50>;
+                layers = <WS>;
                 key-positions = <0 1>;
-                bindings = <&kp ESC>;
+                bindings = <&macro_rename>;
+            };
+
+            combo_reformat_ws {
+                timeout-ms = <50>;
+                layers = <WS>;
+                key-positions = <2 3>;
+                bindings = <&macro_reformat>;
+            };
+
+            combo_find_ws {
+                timeout-ms = <50>;
+                layers = <WS>;
+                key-positions = <4 5>;
+                bindings = <&macro_find_in_path>;
+            };
+
+            combo_replace_ws {
+                timeout-ms = <50>;
+                layers = <WS>;
+                key-positions = <6 7>;
+                bindings = <&macro_replace_in_path>;
             };
 
     };
 
     macros {
+        macro_rename: macro_rename {
+            label = "Rename (Shift+F6)";
+            bindings = <&kp LS(F6)>;
+        };
+        macro_reformat: macro_reformat {
+            label = "Reformat (Ctrl+Alt+L)";
+            bindings = <&kp LC(LA(L))>;
+        };
+        macro_find_in_path: macro_find_in_path {
+            label = "Find in Path (Ctrl+Shift+F)";
+            bindings = <&kp LC(LS(F))>;
+        };
+        macro_replace_in_path: macro_replace_in_path {
+            label = "Replace in Path (Ctrl+Shift+R)";
+            bindings = <&kp LC(LS(R))>;
+        };
     };
 
 
@@ -153,7 +191,28 @@ label= "ADJ"                               ;
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 
+        ws_layer {
+// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+label= "WS"                               ;
+// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+//             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
+//             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
+// ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
+// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+//                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
+//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+ bindings = <
+// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
+                &trans      &trans     &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
+                &trans      &trans     &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans  
+    &trans      &trans      &trans     &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans      &trans         
+                                       &trans      &trans      &trans          &trans      &trans      &trans      
+                        >;
+};
 
 
 
