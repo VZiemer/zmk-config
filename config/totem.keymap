@@ -38,6 +38,12 @@
             bindings = <&macro_rename>;
             key-positions = <0 1>;
             layers = <4>;
+            timeout-ms = <3>;
+        };
+
+        LALA {
+            bindings = <&new_macro>;
+            key-positions = <32 33 34>;
         };
     };
 
@@ -46,6 +52,13 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press>, <&kp LSHFT>, <&macro_tap>, <&kp F6>;
+        };
+
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(L) &kp LS(A) &kp LS(L) &kp LS(A) &kp LS(L) &kp LS(A) &kp LS(L) &kp LS(A) &kp LS(L) &kp LS(A) &kp LS(L) &kp LS(A) &kp LS(L) &kp LS(A) &kp LS(L) &kp LS(A) &kp LS(L) &kp LS(A) &kp LS(L) &kp LS(A) &kp LS(L) &kp LS(A)>;
+            label = "NEW_MACRO";
         };
     };
 
@@ -175,10 +188,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+       &kp Q  &kp W  &kp F      &kp P     &kp G        &kp J      &kp L     &kp U      &kp Y    &kp SEMI
+       &kp A  &kp R  &kp S      &kp T     &kp D        &kp H      &kp N     &kp E      &kp I    &kp O
+&kp Q  &kp Z  &kp X  &kp C      &kp V     &kp B        &kp K      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                     &kp LCTRL  &kp LALT  &kp SPACE    &kp ENTER  &kp BSPC  &kp LGUI
             >;
         };
 
