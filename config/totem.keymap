@@ -33,12 +33,7 @@
      combos {
             compatible = "zmk,combos";
             // --- Combos WS --- //
-            combo_rename_ws {
-                timeout-ms = <50>;
-                layers = <WS>;
-                key-positions = <0 1>;
-                bindings = <&macro_rename>;
-            };
+
 
     };
 
