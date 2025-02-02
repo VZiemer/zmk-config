@@ -71,8 +71,25 @@ combos {
 };
 
 
-    macros {
+macros {
+    macro_rename: macro_rename {
+        label = "Rename (Shift+F6)";
+        bindings = <&kp LS(F6)>;
     };
+    macro_reformat: macro_reformat {
+        label = "Reformat (Ctrl+Alt+L)";
+        bindings = <&kp LC(LA(L))>;
+    };
+    macro_find_in_path: macro_find_in_path {
+        label = "Find in Path (Ctrl+Shift+F)";
+        bindings = <&kp LC(LS(F))>;
+    };
+    macro_replace_in_path: macro_replace_in_path {
+        label = "Replace in Path (Ctrl+Shift+R)";
+        bindings = <&kp LC(LS(R))>;
+    };
+};
+
 
 
         keymap {
