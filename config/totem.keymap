@@ -93,63 +93,15 @@
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-
-
-
-
-
-
-engram_layer {
-    label = "ENGRAM";
-    bindings = <
-        // ┌────────────────────────────────────────────────────┐
-        // │                   LINHA SUPERIOR                   │
-        // └────────────────────────────────────────────────────┘
-        // Lado esquerdo (5 colunas)             |   Lado direito (5 colunas)
-        &kp B        &kp Y       &kp O       &kp U        &kp SQT                                       &kp G       &kp D       &kp Q       &kp K       &kp SEMI
-
-        // ┌────────────────────────────────────────────────────┐
-        // │                    LINHA DO MEIO                   │
-        // └────────────────────────────────────────────────────┘
-        // Usando tap-hold (mod-tap) em cada letra da fileira
-        &mt LGUI M   &mt LALT H   &mt LCTRL A   &mt LSHFT E   &kp I                                       &kp P       &mt RSHFT L &mt RCTRL N &mt RALT X  &mt RGUI DOT
-
-        // ┌────────────────────────────────────────────────────┐
-        // │                   LINHA INFERIOR                   │
-        // └────────────────────────────────────────────────────┘
-        // Tem 6 colunas de cada lado no TOTEM
-        &lt ADJ ESC   &kp COMMA   &kp C       &kp T        &kp S        &kp R                                       &kp Z       &kp F       &kp J       &kp W       &kp MINUS   &lt WS BSLH
-
-        // ┌────────────────────────────────────────────────────┐
-        // │        CLUSTER DE POLEGARES / CAMADAS EXTRAS       │
-        // └────────────────────────────────────────────────────┘
-        &kp DEL       &lt NAV TAB    &kp SPACE                                                 &kp RET      &lt SYM DEL   &kp BSPC
-    >;
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        engram_layer {
+            label = "ENGRAM";
+            bindings = <
+             &kp B       &kp Y       &kp O        &kp U        &kp SQT      &kp G    &kp D        &kp Q        &kp K       &kp SEMI
+             &mt LGUI M  &mt LALT H  &mt LCTRL A  &mt LSHFT E  &kp I        &kp P    &mt RSHFT L  &mt RCTRL N  &mt RALT X  &mt RGUI DOT
+&lt ADJ ESC  &kp COMMA   &kp C       &kp T        &kp S        &kp R        &kp Z    &kp F        &kp J        &kp W       &kp MINUS     &lt 4 BSLH
+                                     &kp DEL      &lt NAV TAB  &kp SPACE    &kp RET  &lt SYM DEL  &kp BSPC
+            >;
+        };
 
         nav_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
