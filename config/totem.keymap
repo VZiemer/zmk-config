@@ -37,7 +37,7 @@
         rename {
             bindings = <&macro_rename>;
             key-positions = <0 1>;
-            layers = <4>;
+            layers = <3>;
             timeout-ms = <3>;
         };
 
@@ -84,22 +84,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-             &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y    &kp U        &kp I        &kp O       &kp P
-             &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &kp H    &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMI
-&lt ADJ ESC  &kp Z       &kp X       &kp C        &kp V        &kp B        &kp N    &kp M        &kp COMMA    &kp DOT     &kp FSLH       &lt WST BSLH
-                                     &kp DEL      &lt NAV TAB  &kp SPACE    &kp RET  &lt SYM DEL  &kp BSPC
-            >;
-        };
-
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-        engram_layer {
-            label = "ENGRAM";
-            bindings = <
-             &kp B       &kp Y       &kp O        &kp U        &kp SQT      &kp G    &kp D        &kp Q        &kp K       &kp SEMI
-             &mt LGUI M  &mt LALT H  &mt LCTRL A  &mt LSHFT E  &kp I        &kp P    &mt RSHFT L  &mt RCTRL N  &mt RALT X  &mt RGUI DOT
-&lt ADJ ESC  &kp COMMA   &kp C       &kp T        &kp S        &kp R        &kp Z    &kp F        &kp J        &kp W       &kp MINUS     &lt 4 BSLH
-                                     &kp DEL      &lt NAV TAB  &kp SPACE    &kp RET  &lt SYM DEL  &kp BSPC
+           &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y    &kp U        &kp I        &kp O       &kp P
+           &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &kp H    &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMI
+&lt 5 ESC  &kp Z       &kp X       &kp C        &kp V        &kp B        &kp N    &kp M        &kp COMMA    &kp DOT     &kp FSLH       &lt 3 BSLH
+                                   &kp DEL      &lt 2 TAB    &kp SPACE    &kp RET  &lt 1 DEL    &kp BSPC
             >;
         };
 
@@ -123,11 +111,9 @@
         &kp ESC    &trans     &kp UP    &kp EQUAL  &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_PLUS
         &kp LSHFT  &kp LEFT   &kp DOWN  &kp RIGHT  &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_MINUS
 &trans  &kp DEL    &kp PG_UP  &kp CAPS  &kp PG_DN  &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &trans
-                              &trans    &trans     &trans      &mo ADJ   &kp NUMBER_0  &trans
+                              &trans    &trans     &trans      &mo 2     &kp NUMBER_0  &trans
             >;
         };
-
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         sim_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -149,11 +135,9 @@
         &kp EXCL     &kp AT       &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS        &kp RA(U)   &kp SQT     &kp DQT
         &kp RA(A)    &trans       &kp RA(S)  &trans    &trans       &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)  &kp RA(N4)  &kp RA(O)
 &trans  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV  &kp C_NEXT  &kp BSLH   &trans
-                                  &trans     &trans    &mo ADJ      &trans        &kp C_PP        &trans
+                                  &trans     &trans    &mo 2        &trans        &kp C_PP        &trans
             >;
         };
-
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         adjust_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -179,8 +163,6 @@
             >;
         };
 
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
         ws_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
@@ -202,6 +184,16 @@
        &kp A  &kp R  &kp S      &kp T     &kp D        &kp H      &kp N     &kp E      &kp I    &kp O
 &kp Q  &kp Z  &kp X  &kp C      &kp V     &kp B        &kp K      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
                      &kp LCTRL  &kp LALT  &kp SPACE    &kp ENTER  &kp BSPC  &kp LGUI
+            >;
+        };
+
+        engram_layer {
+            label = "ENGRAM";
+            bindings = <
+           &kp B       &kp Y       &kp O        &kp U        &kp SQT      &kp G    &kp D        &kp Q        &kp K       &kp SEMI
+           &mt LGUI M  &mt LALT H  &mt LCTRL A  &mt LSHFT E  &kp I        &kp P    &mt RSHFT L  &mt RCTRL N  &mt RALT X  &mt RGUI DOT
+&lt 0 ESC  &kp COMMA   &kp C       &kp T        &kp S        &kp R        &kp Z    &kp F        &kp J        &kp W       &kp MINUS     &lt 3 BSLH
+                                   &kp DEL      &lt 5 TAB    &kp SPACE    &kp RET  &lt 1 DEL    &kp BSPC
             >;
         };
 
